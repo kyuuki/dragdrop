@@ -4,4 +4,35 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-sm">
+    <div class="card">
+      <div class="card-body">
+        <ul class="list-group sortable" style="height: 200px">
+          <li class="list-group-item">1</li>
+          <li class="list-group-item">2</li>
+          <li class="list-group-item">3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="col-sm">
+    <div class="card">
+      <div class="card-body">
+        <ul class="list-group sortable" style="height: 200px">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+<script>
+  $(function() {
+    $(".sortable").sortable({
+      connectWith: ".sortable"
+    });
+  });
+</script>
+<% end %>
